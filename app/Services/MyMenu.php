@@ -16,7 +16,8 @@ class MyMenu implements SidebarInterface
                 'type' => 'breaker',
                 'name' => 'General',
                 'description' => 'Administration Control',
-            ],
+
+],
             [
                 'type' => 'link',
                 'name' => 'Dashboard',
@@ -51,6 +52,43 @@ class MyMenu implements SidebarInterface
                 ],
                 'children' => $this->indexCreateChildren('user', \App\Models\User::class),
             ],
+            [
+                'type' => 'menu',
+                'name' => 'Plant',
+                'icon' => 'fa fa-leaf',
+                'is_active' => request()->routeIs('plant*') ? 'active' : '',
+                'conditions' => [
+                [
+                'type' => 'or',
+                'condition' => auth()->user()->can('view-any', \App\Models\Admin\Plant::class),
+                ],
+                [
+                'type' => 'or',
+                'condition' => auth()->user()->can('create', \App\Models\Admin\Plant::class),
+                ],
+                ],
+                "children" => $this->indexCreateChildren("plant", \App\Models\Admin\Plant::class),
+
+                ],
+
+                [
+                    'type' => 'menu',
+                    'name' => 'Disease',
+                    'icon' => 'far fa-user',
+                    'is_active' => request()->routeIs('disease*') ? 'active' : '',
+                    'conditions' => [
+                    [
+                    'type' => 'or',
+                    'condition' => auth()->user()->can('view-any', \App\Models\Admin\Disease::class),
+                    ],
+                    [
+                    'type' => 'or',
+                    'condition' => auth()->user()->can('create', \App\Models\Admin\Disease::class),
+                    ],
+                    ],
+                    "children" => $this->indexCreateChildren("disease", \App\Models\Admin\Disease::class),
+
+                    ],
             [
                 'type' => 'menu',
                 'name' => 'Role',

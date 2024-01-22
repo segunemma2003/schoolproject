@@ -62,3 +62,5 @@ Route::get('disease/{id}', function($id){
 
 Route::resource('admin/disease',\App\Http\Controllers\Admin\DiseaseController::class);
 Route::resource('admin/plant',\App\Http\Controllers\Admin\PlantController::class);
+
+Route::resource('admin/post',\App\Http\Controllers\Admin\PostController::class);
