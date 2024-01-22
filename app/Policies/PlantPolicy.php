@@ -12,9 +12,9 @@ class PlantPolicy
 
     public function before($user, $ability)
     {
-        if ($user->isSuperAdmin()) {
+        // if ($user->isSuperAdmin()) {
             return true;
-        }
+        // }
     }
 
 
