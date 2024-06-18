@@ -64,3 +64,4 @@ Route::resource('admin/disease',\App\Http\Controllers\Admin\DiseaseController::c
 Route::resource('admin/plant',\App\Http\Controllers\Admin\PlantController::class);
 
 Route::resource('admin/post',\App\Http\Controllers\Admin\PostController::class);
+Route::resource('admin/plants',\App\Http\Controllers\Admin\PlantsController::class);

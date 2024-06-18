@@ -16,13 +16,64 @@ class MyMenu implements SidebarInterface
                 'type' => 'breaker',
                 'name' => 'General',
                 'description' => 'Administration Control',
-            ],
+            
+],
             [
                 'type' => 'link',
                 'name' => 'Dashboard',
                 'icon' => 'fa fa-home',
                 'link' => route('dashboard'),
                 'is_active' => request()->routeIs('home') ? 'active' : '',
+                'conditions' => [
+                    [
+                        'type' => 'and',
+                        'condition' => auth()->user()->hasRole('admin'),
+                    ],
+                ],
+            ],
+
+            // [
+            //     'type' => 'menu',
+            //     'name' => 'Plants',
+            //     'icon' => 'fa fa-wrench',
+            //     'is_active' => request()->routeIs('plants*') ? 'active' : '',
+            //     'conditions' => [
+            //     [
+            //     'type' => 'or',
+            //     'condition' => auth()->user()->can('view-any', \App\Models\Admin\Plants::class),
+            //     ],
+            //     [
+            //     'type' => 'or',
+            //     'condition' => auth()->user()->can('create', \App\Models\Admin\Plants::class),
+            //     ],
+            //     ],
+            //     "children" => $this->indexCreateChildren("plants", \App\Models\Admin\Plants::class),
+                
+            //     ],
+            [
+                'type' => 'menu',
+                'name' => 'Plant',
+                'icon' => 'fa fa-wrench',
+                'is_active' => request()->routeIs('plant*') ? 'active' : '',
+                'conditions' => [
+                [
+                'type' => 'or',
+                'condition' => auth()->user()->can('view-any', \App\Models\Admin\Plant::class),
+                ],
+                [
+                'type' => 'or',
+                'condition' => auth()->user()->can('create', \App\Models\Admin\Plant::class),
+                ],
+                ],
+                "children" => $this->indexCreateChildren("plant", \App\Models\Admin\Plant::class),
+                
+                ],
+            [
+                'type' => 'link',
+                'name' => 'Disease',
+                'icon' => 'fa fa-book',
+                'is_active' => request()->routeIs('disease*') ? 'active' : '',
+                'link' => adminRedirectRoute('disease'),
                 'conditions' => [
                     [
                         'type' => 'and',
