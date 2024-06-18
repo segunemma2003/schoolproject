@@ -14,10 +14,10 @@ class AddPlant extends Component
     use WithFileUploads;
 
     public $family;
-    public $species;
-    public $yoruba;
-    public $hausa;
-    public $igbo;
+    public $scientific_name;
+    public $okun;
+    public $igala;
+    public $ebira;
     public $common_name;
     public $part_used;
     public $medicinal_use;
@@ -44,10 +44,10 @@ class AddPlant extends Component
     {
         $validatedData = $this->validate([
             'family' => 'required',
-            'species' => 'required',
-            'yoruba' => 'required',
-            'hausa' => 'required',
-            'igbo' => 'required',
+            'scientific_name' => 'required',
+            'okun' => 'required',
+            'ebira' => 'required',
+            'igala' => 'required',
             'common_name' => 'required',
             'part_used' => 'required',
             'medicinal_use' => 'required',
@@ -61,10 +61,10 @@ class AddPlant extends Component
         } else {
         $plant = Plant::create([
             'family' => $this->family,
-            'species' => $this->species,
-            'yoruba' => $this->yoruba,
-            'hausa' => $this->hausa,
-            'igbo' => $this->igbo,
+            'scientific_name' => $this->scientific_name,
+            'okun' => $this->okun,
+            'ebira' => $this->ebira,
+            'igala' => $this->igala,
             'common_name' => $this->common_name,
             'part_used' => $this->part_used,
             'medicinal_use' => $this->medicinal_use,

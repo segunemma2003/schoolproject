@@ -20,7 +20,12 @@ class PlantSearch extends Component
 
 
             return view('livewire.plant-search', [
-                'plants' => Plant::where('common_name', 'like', '%' . $this->searchTerm . '%')->paginate(20),
+                'plants' => Plant::where('common_name', 'like', '%' . $this->searchTerm . '%')
+                    ->orWhere('scientific_name', 'like', '%' . $this->searchTerm . '%')
+                    ->orWhere('okun', 'like', '%' . $this->searchTerm . '%')
+                    ->orWhere('igala', 'like', '%' . $this->searchTerm . '%')
+                    ->orWhere('ebira', 'like', '%' . $this->searchTerm . '%')
+                ->paginate(20),
             ]);
 
     }

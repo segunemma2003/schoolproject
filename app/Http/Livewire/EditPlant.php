@@ -13,12 +13,11 @@ class EditPlant extends Component
 {
     use WithFileUploads;
 
-    public $plant;
     public $family;
-    public $species;
-    public $yoruba;
-    public $hausa;
-    public $igbo;
+    public $scientific_name;
+    public $okun;
+    public $igala;
+    public $ebira;
     public $common_name;
     public $part_used;
     public $medicinal_use;
@@ -33,10 +32,10 @@ class EditPlant extends Component
     {
         $this->plant = $plant;
         $this->family = $plant->family;
-        $this->species = $plant->species;
-        $this->yoruba = $plant->yoruba;
-        $this->hausa = $plant->hausa;
-        $this->igbo = $plant->igbo;
+        $this->scientific_name = $plant->scientific_name;
+        $this->okun = $plant->okun;
+        $this->ebira = $plant->ebira;
+        $this->igala = $plant->igala;
         $this->common_name = $plant->common_name;
         $this->part_used = $plant->part_used;
         $this->medicinal_use = $plant->medicinal_use;
@@ -61,10 +60,10 @@ class EditPlant extends Component
     {
         $validatedData = $this->validate([
             'family' => 'required',
-            'species' => 'required',
-            'yoruba' => 'required',
-            'hausa' => 'required',
-            'igbo' => 'required',
+            'scientific_name' => 'required',
+            'okun' => 'required',
+            'ebira' => 'required',
+            'igala' => 'required',
             'common_name' => 'required',
             'part_used' => 'required',
             'medicinal_use' => 'required',
@@ -89,10 +88,10 @@ class EditPlant extends Component
 
             $this->plant->update([
                 'family' => $this->family,
-                'species' => $this->species,
-                'yoruba' => $this->yoruba,
-                'hausa' => $this->hausa,
-                'igbo' => $this->igbo,
+               'scientific_name' => $this->scientific_name,
+            'okun' => $this->okun,
+            'ebira' => $this->ebira,
+            'igala' => $this->igala,
                 'common_name' => $this->common_name,
                 'part_used' => $this->part_used,
                 'medicinal_use' => $this->medicinal_use,

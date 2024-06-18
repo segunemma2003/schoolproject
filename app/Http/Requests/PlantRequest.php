@@ -23,10 +23,10 @@ class PlantRequest extends FormRequest
     {
         return [
             "family"=>"required",
-            "species"=>"required|unique:plants",
-            "yoruba" => "required",
-            "hausa"=>"required",
-            "igbo" => "required",
+            "scientific_name"=>"required|unique:plants",
+            "okun" => "required",
+            "ebira"=>"required",
+            "igala" => "required",
             "common_name"=>"required",
             "part_used"=>"required",
             "medicinal_use"=>"required",

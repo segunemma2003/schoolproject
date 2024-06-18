@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
             $table->string('family');
-            $table->string('species');
-            $table->string('yoruba');
-            $table->string('hausa');
-            $table->string('igbo');
+            $table->string('scientific_name');
+            $table->string('okun');
+            $table->string('ebira');
+            $table->string('igala');
             $table->string('common_name');
             $table->text('part_used');
             $table->text('medicinal_use');
