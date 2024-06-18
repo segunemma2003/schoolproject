@@ -33,7 +33,5 @@ class AdminServiceProvider extends ServiceProvider
     protected function repos()
     {
         // $this->app->bind(AnnouncementRepositoryInterface::class, AnnouncementRepository::class);
-    $this->app->bind(\App\Contracts\PlantRepositoryInterface::class, \App\Repositories\PlantRepository::class);
-    $this->app->bind(\App\Contracts\DiseaseRepositoryInterface::class, \App\Repositories\DiseaseRepository::class);
-}
+    }
 }
