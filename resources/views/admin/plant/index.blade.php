@@ -10,10 +10,10 @@
                     <th>ID</th>
                     <th>Common Name</th>
                     <th>Family</th>
-                    <th>Species</th>
-                    <th>Yoruba</th>
-                    <th>Hausa</th>
-                    <th>Igbo</th>
+                    <th>Scientific Name</th>
+                    <th>Okun</th>
+                    <th>Ebira</th>
+                    <th>Igala</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -23,10 +23,10 @@
                     <td>{{ $loop->index+1 }}</td>
                     <td>{{ $plant->common_name }}</td>
                     <td>{{ $plant->family }}</td>
-                    <td>{{ $plant->species }}</td>
-                    <td>{{ $plant->yoruba }}</td>
-                    <td>{{ $plant->hausa }}</td>
-                    <td>{{ $plant->igbo }}</td>
+                    <td>{{ $plant->scientific_name }}</td>
+                    <td>{{ $plant->okun }}</td>
+                    <td>{{ $plant->ebira }}</td>
+                    <td>{{ $plant->igala }}</td>
 
                     <td>
                         <x-adminetic-action :model="$plant" route="plant" />
@@ -36,13 +36,13 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th>ID</th>
+                <th>ID</th>
                     <th>Common Name</th>
                     <th>Family</th>
-                    <th>Species</th>
-                    <th>Yoruba</th>
-                    <th>Hausa</th>
-                    <th>Igbo</th>
+                    <th>Scientific Name</th>
+                    <th>Okun</th>
+                    <th>Ebira</th>
+                    <th>Igala</th>
                     <th>Actions</th>
                 </tr>
             </tfoot>

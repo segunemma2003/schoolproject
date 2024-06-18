@@ -19,28 +19,28 @@
                 @error('family') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="col-md-6">
-                <label class="form-label" for="species">Species<span class="text-danger">*</span></label>
-                <input type="text" wire:model="species" id="species" class="form-control" placeholder="Species" name="species">
-                @error('species') <span class="text-danger">{{ $message }}</span> @enderror
+                <label class="form-label" for="scientific_name">Scientific Name<span class="text-danger">*</span></label>
+                <input type="text" wire:model="scientific_name" id="scientific_name" class="form-control" placeholder="Scientific Name" name="scientific_name">
+                @error('scientific_name') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label class="form-label" for="yoruba">Yoruba<span class="text-danger">*</span></label>
-                <input type="text" wire:model="yoruba" id="yoruba" class="form-control" placeholder="Yoruba" name="yoruba">
-                @error('yoruba') <span class="text-danger">{{ $message }}</span> @enderror
+                <label class="form-label" for="okun">Okun<span class="text-danger">*</span></label>
+                <input type="text" wire:model="okun" id="okun" class="form-control" placeholder="Okun" name="okun">
+                @error('okun') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="col-md-6">
-                <label class="form-label" for "hausa">Hausa<span class="text-danger">*</span></label>
-                <input type="text" wire:model="hausa" id="hausa" class="form-control" placeholder="Hausa" name="hausa">
-                @error('hausa') <span class="text-danger">{{ $message }}</span> @enderror
+                <label class="form-label" for="igala">Igala<span class="text-danger">*</span></label>
+                <input type="text" wire:model="igala" id="igala" class="form-control" placeholder="Igala" name="igala">
+                @error('igala') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label class="form-label" for "igbo">Igbo<span class="text-danger">*</span></label>
-                <input type="text" wire:model="igbo" id="igbo" class="form-control" placeholder="Igbo" name="igbo">
-                @error('igbo') <span class="text-danger">{{ $message }}</span> @enderror
+                <label class="form-label" for="ebira">Ebira<span class="text-danger">*</span></label>
+                <input type="text" wire:model="ebira" id="ebira" class="form-control" placeholder="Ebira" name="ebira">
+                @error('ebira') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="col-md-6">
                 <label class="form-label" for="common_name">Common Name<span class="text-danger">*</span></label>

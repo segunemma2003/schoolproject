@@ -25,20 +25,20 @@
                                                 <td class="users-view-username">{{ $plant->family ?? '' }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Species:</td>
+                                                <td>scientific_name:</td>
                                                 <td class="users-view-name">{{ $plant->species ?? '' }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Yoruba:</td>
-                                                <td class="users-view-email">{{ $plant->yoruba ?? '' }}</td>
+                                                <td>Okun:</td>
+                                                <td class="users-view-email">{{ $plant->okun ?? '' }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Hausa:</td>
-                                                <td>{{ $plant->hausa ?? '' }}</td>
+                                                <td>Igala:</td>
+                                                <td>{{ $plant->igala ?? '' }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Igbo:</td>
-                                                <td>{{ $plant->igbo ?? '' }}</td>
+                                                <td>Ebira:</td>
+                                                <td>{{ $plant->ebira ?? '' }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Common Name:</td>
