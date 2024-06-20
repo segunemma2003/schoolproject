@@ -26,7 +26,8 @@ class DiseasePolicy
      */
     public function viewAny(User $user)
     {
-        return $user->userCanDo('Disease', 'browse');
+        // return $user->userCanDo('Disease', 'browse');
+        return true;
     }
 
     /**
@@ -38,7 +39,8 @@ class DiseasePolicy
      */
     public function view(User $user, Disease $disease)
     {
-        return $user->userCanDo('Disease', 'read');
+        // return $user->userCanDo('Disease', 'read');
+        return true;
     }
 
     /**
@@ -49,7 +51,8 @@ class DiseasePolicy
      */
     public function create(User $user)
     {
-        return $user->userCanDo('Disease', 'add');
+        // return $user->userCanDo('Disease', 'add');
+        return true;
     }
 
     /**
@@ -61,7 +64,8 @@ class DiseasePolicy
      */
     public function update(User $user, Disease $disease)
     {
-        return $user->userCanDo('Disease', 'edit');
+        // return $user->userCanDo('Disease', 'edit');
+        return true;
     }
 
     /**
@@ -73,7 +77,8 @@ class DiseasePolicy
      */
     public function delete(User $user, Disease $disease)
     {
-        return $user->userCanDo('Disease', 'delete');
+        // return $user->userCanDo('Disease', 'delete');
+        return true;
     }
 
     /**

@@ -26,7 +26,8 @@ class PlantPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->userCanDo('Plant', 'browse');
+        // return $user->userCanDo('Plant', 'browse');
+        return true;
     }
 
     /**
@@ -38,7 +39,8 @@ class PlantPolicy
      */
     public function view(User $user, Plant $plant)
     {
-        return $user->userCanDo('Plant', 'read');
+        // return $user->userCanDo('Plant', 'read');
+        return true;
     }
 
     /**
@@ -49,7 +51,8 @@ class PlantPolicy
      */
     public function create(User $user)
     {
-        return $user->userCanDo('Plant', 'add');
+        // return $user->userCanDo('Plant', 'add');
+        return true;
     }
 
     /**
@@ -61,7 +64,8 @@ class PlantPolicy
      */
     public function update(User $user, Plant $plant)
     {
-        return $user->userCanDo('Plant', 'edit');
+        // return $user->userCanDo('Plant', 'edit');
+        return true;
     }
 
     /**
@@ -73,7 +77,8 @@ class PlantPolicy
      */
     public function delete(User $user, Plant $plant)
     {
-        return $user->userCanDo('Plant', 'delete');
+        // return $user->userCanDo('Plant', 'delete');
+        return true;
     }
 
     /**
