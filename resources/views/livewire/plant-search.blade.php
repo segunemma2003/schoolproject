@@ -22,10 +22,10 @@
                     <th>ID</th>
                     <th>Common Name</th>
                     <th>Family</th>
-                    <th>Species</th>
-                    <th>Yoruba</th>
-                    <th>Hausa</th>
-                    <th>Igbo</th>
+                    <th>Scientific Name</th>
+                    <th>Okun</th>
+                    <th>Igala</th>
+                    <th>Ebira</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -36,10 +36,10 @@
                         <td>{{ $loop->index+1 }}</td>
                         <td>{{ $plant->common_name }}</td>
                         <td>{{ $plant->family }}</td>
-                        <td>{{ $plant->species }}</td>
-                        <td>{{ $plant->yoruba }}</td>
-                        <td>{{ $plant->hausa }}</td>
-                        <td>{{ $plant->igbo }}</td>
+                        <td>{{ $plant->scientific_name }}</td>
+                        <td>{{ $plant->okun }}</td>
+                        <td>{{ $plant->igala }}</td>
+                        <td>{{ $plant->ebira }}</td>
                         <td>
                             <a href="{{ route('plant-search-details', ['id' => $plant->id]) }}" class="btn btn-success">View Details</a>
                         </td>

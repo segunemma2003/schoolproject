@@ -89,9 +89,7 @@ class AddPlant extends Component
         // Emit a success event to the front-end
         $this->emit('plantSaved','success', 'Plant saved successfully');
     }
-        // Clear the form fields after saving
-        // $this->resetValidation();
-        // $this->reset(['family', 'species', 'yoruba', 'hausa', 'igbo', 'common_name', 'part_used', 'medicinal_use', 'picture', 'price']);
+      
 
         return redirect('/admin/plant');
     }

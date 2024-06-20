@@ -25,8 +25,8 @@
                                                 <td class="users-view-username">{{ $plant->family ?? '' }}</td>
                                             </tr>
                                             <tr>
-                                                <td>scientific_name:</td>
-                                                <td class="users-view-name">{{ $plant->species ?? '' }}</td>
+                                                <td>Scientific Name:</td>
+                                                <td class="users-view-name">{{ $plant->scientific_name ?? '' }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Okun:</td>

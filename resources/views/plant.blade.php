@@ -84,7 +84,7 @@
                     <th>ID</th>
                     <th>Common Name</th>
                     <th>Family</th>
-                    <th>Species</th>
+                    <th>Scientific Name</th>
                     <th>Igala</th>
                     <th>Ebira</th>
                     <th>Okun</th>
@@ -98,7 +98,7 @@
                         <td>{{ $loop->index+1 }}</td>
                         <td>{{ $plant->common_name }}</td>
                         <td>{{ $plant->family }}</td>
-                        <td>{{ $plant->species }}</td>
+                        <td>{{ $plant->scientific_name }}</td>
                         <td>{{ $plant->igala }}</td>
                         <td>{{ $plant->ebira }}</td>
                         <td>{{ $plant->okun }}</td>

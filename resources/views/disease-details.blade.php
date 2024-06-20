@@ -96,7 +96,7 @@
                                         <tr>
                                             <th>{{ $loop->index+1 }}</th>
                                             <td><a href="{{ route('plant-search-details', $plant->id) }}">{{ $plant->common_name }}</a></td>
-                                            <td>{{ $plant->species }}</td>
+                                            <td>{{ $plant->scientific_name }}</td>
                                         </tr>
 
                                         @endforeach
