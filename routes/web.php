@@ -21,6 +21,16 @@ Route::get('/', function () {
 
 Route::admineticAuth();
 
+Route::get('session-check', function () {
+    session(['test' => 'Session is working']);
+    return session('test');
+});
+
+Route::get('session-persist', function () {
+    return session('test', 'Session not found');
+});
+
+
 Route::resource('admin/plant',\App\Http\Controllers\Admin\PlantController::class);
 Route::get('plant', function () {
     $searchTerm = Request::get('searchTerm');

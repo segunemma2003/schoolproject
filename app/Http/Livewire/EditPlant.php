@@ -30,6 +30,9 @@ class EditPlant extends Component
 
     public function mount(Plant $plant)
     {
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }
         $this->plant = $plant;
         $this->family = $plant->family;
         $this->scientific_name = $plant->scientific_name;

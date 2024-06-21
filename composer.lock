@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54fd029c0f09274559cc5b7bd45b9ebf",
+    "content-hash": "608c53bfbeb4d0c46cde5ebdc3f883f1",
     "packages": [
         {
             "name": "brick/math",
@@ -3288,16 +3288,16 @@
         },
         {
             "name": "pratiksh/adminetic",
-            "version": "v2.1.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pratiksh404/adminetic.git",
-                "reference": "f0dc91906d2bb46ad14952667d0253cf068211de"
+                "reference": "d839fe08a372b20e347bcff5292ee1ddb8f348bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pratiksh404/adminetic/zipball/f0dc91906d2bb46ad14952667d0253cf068211de",
-                "reference": "f0dc91906d2bb46ad14952667d0253cf068211de",
+                "url": "https://api.github.com/repos/pratiksh404/adminetic/zipball/d839fe08a372b20e347bcff5292ee1ddb8f348bd",
+                "reference": "d839fe08a372b20e347bcff5292ee1ddb8f348bd",
                 "shasum": ""
             },
             "require": {
@@ -3355,9 +3355,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pratiksh404/adminetic/issues",
-                "source": "https://github.com/pratiksh404/adminetic/tree/v2.1.0"
+                "source": "https://github.com/pratiksh404/adminetic/tree/v2.2.0"
             },
-            "time": "2023-09-22T05:32:22+00:00"
+            "time": "2024-05-03T05:21:29+00:00"
         },
         {
             "name": "psr/cache",
