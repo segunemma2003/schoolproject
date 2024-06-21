@@ -4,14 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Intervention\Image\Facades\Image;
-use Livewire\WithFileUploads;
+// use Livewire\WithFileUploads;
 use App\Models\Admin\Plant;
 use App\Models\Admin\Disease;
 use Auth;
 
 class EditPlant extends Component
 {
-    use WithFileUploads;
+    // use WithFileUploads;
 
     public $family;
     public $scientific_name;
@@ -70,7 +70,7 @@ class EditPlant extends Component
             'common_name' => 'required',
             'part_used' => 'required',
             'medicinal_use' => 'required',
-            'picture' => 'nullable|image|max:1024', // You can adjust the max file size as needed.
+            // 'picture' => 'nullable|image|max:1024', // You can adjust the max file size as needed.
             'price' => 'required|numeric',
         ]);
 
@@ -78,16 +78,16 @@ class EditPlant extends Component
             $firstError = array_shift($this->getErrorBag()->all());
             $this->emit('notifyError', $firstError);
         } else {
-            if ($this->picture) {
-                $picturePath = $this->picture->store('admin/plants', 'public');
+            // if ($this->picture) {
+            //     $picturePath = $this->picture->store('admin/plants', 'public');
 
-                // Update the plant's picture with the new path
-                $this->plant->update(['picture' => $picturePath]);
+            //     // Update the plant's picture with the new path
+            //     $this->plant->update(['picture' => $picturePath]);
 
-                $image = Image::make(public_path('storage/' . $picturePath));
-                $image->resize(200, 200); // Resize the image to a specific size
-                $image->save();
-            }
+            //     $image = Image::make(public_path('storage/' . $picturePath));
+            //     $image->resize(200, 200); // Resize the image to a specific size
+            //     $image->save();
+            // }
 
             $this->plant->update([
                 'family' => $this->family,

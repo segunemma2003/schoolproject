@@ -55,14 +55,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <label class="form-label" for="picture">Picture<span class="text-danger">*</span></label>
                 <input type="file" wire:model="picture" id="picture" class="form-control" placeholder="Picture" name="picture">
                 @if ($picture)
                     <img src="{{ $picture->temporaryUrl() }}" alt="Uploaded Image" class="img-thumbnail">
                 @endif
                 @error('picture') <span class="text-danger">{{ $message }}</span> @enderror
-            </div>
+            </div> -->
             <div class="col-md-6">
                 <label class="form-label" for="price">Price<span class="text-danger">*</span></label>
                 <input type="number" wire:model="price" id="price" class="form-control" placeholder="Price" name="price">
