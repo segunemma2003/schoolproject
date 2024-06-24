@@ -17,15 +17,16 @@ class PlantSearch extends Component
     {
 
         sleep(1);
-
+        $searchTerm = strtolower($this->searchTerm);
 
             return view('livewire.plant-search', [
-                'plants' => Plant::where('common_name', 'like', '%' . $this->searchTerm . '%')
-                    ->orWhere('scientific_name', 'like', '%' . $this->searchTerm . '%')
-                    ->orWhere('okun', 'like', '%' . $this->searchTerm . '%')
-                    ->orWhere('igala', 'like', '%' . $this->searchTerm . '%')
-                    ->orWhere('ebira', 'like', '%' . $this->searchTerm . '%')
-                ->paginate(20),
+                'plants' =>  Plant::whereRaw('LOWER(common_name) LIKE ?', ["%{$searchTerm}%"])
+                ->orWhereRaw('LOWER(scientific_name) LIKE ?', ["%{$searchTerm}%"])
+                ->orWhereRaw('LOWER(okun) LIKE ?', ["%{$searchTerm}%"])
+                ->orWhereRaw('LOWER(igala) LIKE ?', ["%{$searchTerm}%"])
+                ->orWhereRaw('LOWER(ebira) LIKE ?', ["%{$searchTerm}%"])
+                ->orWhereRaw('LOWER(family) LIKE ?', ["%{$searchTerm}%"])
+                ->paginate(20)
             ]);
 
     }

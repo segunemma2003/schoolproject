@@ -37,7 +37,13 @@ Route::get('plant', function () {
 
 
     if (!is_null($searchTerm) || !empty($searchTerm)) {
-        $plants = Plant::where('common_name', 'like', '%' . $searchTerm . '%')->paginate(20);
+        $plants = Plant::where('common_name', 'like', '%' . $searchTerm . '%')
+        ->orWhere('scientific_name', 'like', '%' . $searchTerm . '%')
+        ->orWhere('okun', 'like', '%' . $searchTerm . '%')
+        ->orWhere('igala', 'like', '%' . $searchTerm . '%')
+        ->orWhere('ebira', 'like', '%' . $searchTerm . '%')
+         ->orWhere('family', 'like', '%' . $searchTerm . '%')
+        ->paginate(20);
     } else {
         // Return an empty collection of plants when there's no search term.
         $plants = Plant::query()->where('id', '<', 0)->paginate(20);
